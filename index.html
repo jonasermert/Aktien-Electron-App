@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../node_modules/bulma/css/bulma.css"/>
+    <title>Aktien App</title>
+<script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=CzodyDjc2fGZNIHSWtT6JQ444ouxGVNVkjvKDVorLysYm5CsBy0hFkIYsrOu8yJryoaKoQjAXV_lmQMaXYvKEtxf2WbH8sXBbN9uTjnHUfW8yAwdQctzHPLgd_ahQ3A1cevC0fIDFUJuU2pQF3r67W9TBSJ1mFjQQsnl68Tw3-gOg2dMoQvoXrW0UxpH2tNFKTgYaRJ1Ln6cm0XdrYOGQ0mhBlC48U988k2_0MbWPLgmg2y7tSX1fTekrD56Iyx7bgepqaArIa55DpMPcD52SI7XCt0K88Hwx17xFy_k8On8fzmjsp1w5aHzYiLKsNKpOw4xcRdYxmF22i1rQoi4Q-dI3PQ7hQOqbfg-6yeTr6g34Ocoj7Krt_Mw1RMA6U7gZYXML8sCBc9KFLf_C0-7PHgG4eGEn3H-pF0yd114AlqvUpyMnFb6UBjxIqRnUzJBf-L5quh3rRDBPvSC9axaSXbaa67vQ0I0QyzfvAH0sk1Alv1RZ9pj8rFBTIKiL8yYmAJLA3wjE5kRSGl-XpZ4LmGQwGMS_GEn_uVF6sMsMqZQg-ihdm54JS0wrUlqXLP58x6Ng8LRE3ssc4kT9MM3cnjIQADy3pIZrxUeF8hLqWgg3wdwRFZGBTMLzxToduIpvXcK5XP86gGqCXM3vehi2si_MVq67pfoCJ9hWqbDPBhisPmQ0QIDO_Fa_2W67n6cGTgUZHxI9exGVGpkcF68EGmgZZcLn8auzYtmGWCtt2d0yc3dKpbjP4nzPwZBDh_-nNi0u1SbYCnqa4AbNT6_UA" charset="UTF-8"></script></head>
+<body>
+    <section class="hero is-info welcome is-small">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Aktien App</h1>
+                <h2 class="subtitle">I hope you are having a great day!</h2>
+                <input class="input is-medium" type="text" placeholder="Aktien" onkeydown="searchDB(this)"/>
+            </div>
+        </div>
+    </section>
+    <section class="info-tiles">
+        <div class="tile is-ancestor has-text-centered">
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title" id="aktien">0</p>
+                    <p class="subtitle">Aktien</p>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title" id="noticount">0</p>
+                    <p class="subtitle">Notification</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <div class="columns">
+        <div class="column is-6">
+            <div class="card events-card">
+                <div class="card-table">
+                    <div class="content">
+                        <table class="table is-fullwidth is-striped">
+                            <thead>
+                                <tr>
+                                    <th>Symbol</th>
+                                    <th>Name</th>
+                                    <th>Chart</th>
+                                </tr>
+                            </thead>
+                            </table>
+                        <div id="container"></div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column is-6">
+            <div class="card-table">
+                <div class="content">
+                    <label id="chart"></label>
+                    <canvas id="myChart" width="300" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notification is-warning" id="bulmaNoti" style="display:none"></div>
+    <script src="index.js"></script>
+    <script src="chart.js"></script>
+    <script src="notifikation.js"></script>
+</body>
+</html>

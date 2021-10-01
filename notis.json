@@ -1,0 +1,22 @@
+{
+  "notis": [
+    {
+      "symbol": "DIS",
+      "minvalue": "190",
+      "maxvalue": "1900",
+      "id": 1616854368022
+    },
+    {
+      "symbol": "AMZN",
+      "minvalue": "600",
+      "maxvalue": "5000",
+      "id": 1617604793331
+    },
+    {
+      "symbol": "AAPL",
+      "minvalue": "50",
+      "maxvalue": "100",
+      "id": 1617608460849
+    }
+  ]
+}
